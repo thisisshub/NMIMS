@@ -11,9 +11,9 @@
     
     <!-- title -->
     {% if title %}
-        <title> Notes - {{ title }} </title>
+        <title> Stocks - {{ title }} </title>
     {% else %}
-        <title> Notes App </title>
+        <title> Stocks App </title>
     {% endif %}
 
 </head>
@@ -28,10 +28,13 @@
                 <li><a class="navbar-elements" href="{% url 'notes-filter' %}">FILTER</li>  
                 <li><a class="navbar-elements" href="{% url 'notes-create' %}" >UPLOAD</a></li>
                 <li><a class="navbar-elements" href="{% url 'logout' %}" >LOGOUT</a></li>
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             {% else %}
                 <li><a class="navbar-elements" href="{% url 'user-register' %}" >SIGNUP</a></li>
                 <li><a class="navbar-elements" href="{% url 'login' %}" >LOGIN</a></li>
             {% endif %}
+            
         </ul>
     </nav>
     </div>
@@ -39,12 +42,6 @@
     {% block content %}{% endblock content %}
     </div> 
     
-    <!-- About Section -->
-    <div class="footer">
-        <p>--------------------------------------------------------------</p>
-
-        <p> Made with <3 by Shubhashish</p>
-    </div>
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
