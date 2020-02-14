@@ -1,1 +1,3 @@
 .vscode/
+accounts/__pycache__/
+accounts/migrations/
