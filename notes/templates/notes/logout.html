@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if title %}
+        <title> Notes - {{ title }} </title>
+    {% else %}
+        <title> Notes App </title>
+    {% endif %}
+    <h2> You have been Logged Out! </h2>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Log Back in <a class="ml-2" href="{% url 'login' %}">here</a>
+            </small>
+        </div>
+{% endblock content %}

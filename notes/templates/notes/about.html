@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if title %}
+        <title> Notes - {{ title }} </title>
+    {% else %}
+        <title> Notes App </title>
+    {% endif %}
+    <div class="col-md-4"></div>
+        <h3><strong>About the Developer of this Website.</strong></h3>
+        <p>This website was made keeping in mind to store subject notes under one space so that students can access it easily later during exam time :)</p>
+        <p>This minimalist website is made by Shubhashish Dixit who is based on Indore, India. </p>
+        <p>He is an open source contributor who can be contacted here,</p>
+        <ul>
+            <a href="https://github.com/thisisshub"><istyle="font-style: normal;" class="fab fa-github-alt">  Github</i></a>
+        </ul>
+        <ul>
+            <a href="https://twitter.com/thisisshub"><istyle="font-style: normal;" class="fab fa-twitter-square">  Twitter</i></a>
+        </ul>
+        <ul>
+            <a href="https://instagram.com/imnotshub"><istyle="font-style: normal;" class="fab fa-at">  imnotshub</i></a>
+        </ul>
+        <ul>
+            <a href="mailto:en18cs301258@medicaps.ac.in"><istyle="font-style: normal;" class="fab fa-envelope"> Feel Free To Mail Any Bugs or Issues here</i></a>
+        </ul>
+    </div>  
+{% endblock content %}

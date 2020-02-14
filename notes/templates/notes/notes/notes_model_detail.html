@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %} 
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ object.uploader }}</a>
+              <small class="text-muted">{{ object.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="{% url 'notes-detail' object.id %}">{{ object.title }}</a></h2>
+            <h4><strong> Description: </strong></h4>
+            <p class="article-content">{{ object.description }}</p>
+            <p class="article-content"><strong>Branch: </strong>{{ object.branch_choice }}</p>
+            <p class="article-content"><strong>Semester: </strong>{{ object.file_semester }}</p>          
+             {% if user.is_authenticated and request.user.username == object.uploader %}
+                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'notes-delete' object.id %}"> Delete </a>
+              {% endif %}
+          </div>
+          <p><a href="{{ object.file.url }}" download>Download</p>
+        </article>
+{% endblock content %}
