@@ -28,13 +28,10 @@
                 <li><a class="navbar-elements" href="{% url 'notes-filter' %}">FILTER</li>  
                 <li><a class="navbar-elements" href="{% url 'notes-create' %}" >UPLOAD</a></li>
                 <li><a class="navbar-elements" href="{% url 'logout' %}" >LOGOUT</a></li>
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             {% else %}
                 <li><a class="navbar-elements" href="{% url 'user-register' %}" >SIGNUP</a></li>
                 <li><a class="navbar-elements" href="{% url 'login' %}" >LOGIN</a></li>
             {% endif %}
-            
         </ul>
     </nav>
     </div>

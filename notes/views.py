@@ -34,10 +34,21 @@ from django.core.files import File
 # filters 
 from .filters import NotesFilter
 
+import quandl
+import pandas_datareader as web
+import matplotlib as plt
+
 def home(request):
     """
     Displays home page requests.
     """
+    df = web.DataReader('AMZN', data_source='yahoo')
+    print(df)   
+    stocks = ['AMZN', 'AAPL']
+    stock_list = []
+    for stock in stocks:
+        stock_list.append(stock)
+        print(stock)
     context = {'posts': Notes_Model.objects.all}
     return render(request, template_name='home.html', context=context)
 
@@ -147,3 +158,6 @@ def download(request, path):
             response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
             return response
         raise Http404
+
+def graph(request):
+    pass
